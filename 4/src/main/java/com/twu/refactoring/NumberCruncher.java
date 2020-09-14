@@ -8,20 +8,23 @@ public class NumberCruncher {
     }
 
     public int countEven() {
-        int count = 0;
-        for (int number : numbers) {
-            if (number % 2 == 0) count++;
-        }
+        int count = getCountEvenOrOdd(0);
         return count;
     }
 
     public int countOdd() {
+        int count = getCountEvenOrOdd(1);
+        return count;
+    }
+
+    private int getCountEvenOrOdd(int i) {
         int count = 0;
         for (int number : numbers) {
-            if (number % 2 == 1) count++;
+            if (number % 2 == i) count++;
         }
         return count;
     }
+
 
     public int countPositive() {
         int count = 0;
